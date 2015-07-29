@@ -3,9 +3,7 @@
  */
 
 exports.renderBase = function(req, res, next) {
-    res.render('layouts/index.html', {
-        msg: "Welcome11"
-    });
+    res.render('layouts/index.html');
 };
 exports.startShow = function(req, res, next){
    
