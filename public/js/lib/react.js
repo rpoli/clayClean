@@ -9926,6 +9926,10 @@ function defineMutationMembrane(prototype) {
  * @internal
  */
 var ReactElement = function(type, key, ref, owner, context, props) {
+  
+
+
+
   // Built-in properties that belong on the element
   this.type = type;
   this.key = key;
@@ -9982,6 +9986,10 @@ if ("production" !== "development") {
 }
 
 ReactElement.createElement = function(type, config, children) {
+
+    console.log(config);
+
+
   var propName;
 
   // Reserved names are extracted

@@ -1,0 +1,33 @@
+#appSection{
+	min-height:450px;
+	background-color: #ffffff;
+
+}
+
+.member-table-header{	
+	background-color : #007EB9;
+	color:#fff;	
+
+}
+
+.member-table-header h3{
+	font-family:"Gill Sans MT";
+	font-weight:200;
+	margin-top:10px;
+}
+
+.member-section{
+	min-height:450px;
+	border-right:1px solid #ddd;
+	border-left:1px solid #ddd;	
+}
+
+.member-section table td{
+	cursor:pointer;
+}
+
+.refresh-btn{
+	margin-top:15px;
+	cursor : pointer;
+
+}

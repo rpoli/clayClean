@@ -6,7 +6,7 @@ require.config({
         underscore: 'lib/underscore',
         backbone: "lib/backbone",        
         react: 'lib/react',
-        home : "reactViews/home"
+        reactViews : "reactViews"
     },
     shim: {
         backbone: {

@@ -1,14 +1,30 @@
-define(['react'], function( React ) {
+define(['react'], function(React) {
 
-	var MainComponent = React.createClass({
-	  render: function () {
-	    return (
-	      <div>
-	        <div id="main-container">Hello main-container</div>
-	      </div>
-	    );
-	  }
-	}); 
-	return MainComponent; 
+    var reactComponent = React.createClass({
+
+        getInitialState: function() {
+            return ({
+                title : "mindQ",
+                username: "rajesh" 
+            });
+        },
+
+        render: function() {
+            return ( 
+                <div className="row footer-row" >
+                    <div className="col-md-12" > 
+                           <div className="text-right title"></div>                        
+                    </div>
+	           </div>
+            );
+        }
+    });
+
+    var componentObj = {};
+
+    componentObj.el = function() {
+        return React.createElement(reactComponent);
+    }
+    return componentObj;
 
 });

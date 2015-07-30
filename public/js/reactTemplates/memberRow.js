@@ -4,25 +4,26 @@ define(['react'], function(React) {
 
         getInitialState: function() {
             return ({
-                title : "mindQ",
-                username: "rajesh" 
+                name: "rajesh"
             });
         },
 
         render: function() {
             return ( 
-                <div className="row header-row" >
-                    <div className="col-md-12" > 
-                           <div className="text-right title"><h3 class="text-right"> {this.state.title} </h3></div>                        
-                    </div>
-	           </div>
+                <tr><td>1</td><td>Ramesh Polishetti</td><td>Hyderabad</td><td>+91 9701181405</td><td><span aria-hidden="true" className="glyphicon glyphicon-pencil"></span></td></tr>
             );
         }
     });
 
     var componentObj = {};
+    componentObj.update = function() {
+
+    };
+
+    componentObj.component = reactComponent;
 
     componentObj.el = function() {
+
         return React.createElement(reactComponent);
     }
     return componentObj;

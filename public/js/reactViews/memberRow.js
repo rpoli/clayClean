@@ -9,11 +9,8 @@ define(['react'], function(React) {
         },
 
         render: function() {
-            return ( React.createElement("div", null, 
-                React.createElement("div", {id: "main-container"}, " Hello ", 
-                    this.state.name, 
-                " ")
-	      )
+            return ( 
+                React.createElement("tr", null, React.createElement("td", null, "1"), React.createElement("td", null, "Ramesh Polishetti"), React.createElement("td", null, "Hyderabad"), React.createElement("td", null, "+91 9701181405"), React.createElement("td", null, React.createElement("span", {"aria-hidden": "true", className: "glyphicon glyphicon-pencil"})))
             );
         }
     });
@@ -23,7 +20,7 @@ define(['react'], function(React) {
 
     };
 
-    componentObj.component = new reactComponent();
+    componentObj.component = reactComponent;
 
     componentObj.el = function() {
 

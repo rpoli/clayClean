@@ -34,8 +34,8 @@ module.exports = function(grunt) {
             }]
         }},
         watch: {
-            files: ['<%=scssDir%>/**/*.scss'],
-            tasks: ['sass']
+            files: ['public/scss/**/*.scss','public/js/reactTemplates/**/*.js'],
+            tasks: ['sass','react']
         }
     });
 

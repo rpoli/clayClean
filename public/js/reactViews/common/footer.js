@@ -1,14 +1,30 @@
-define(['react'], function( React ) {
+define(['react'], function(React) {
 
-	var MainComponent = React.createClass({displayName: "MainComponent",
-	  render: function () {
-	    return (
-	      React.createElement("div", null, 
-	        React.createElement("div", {id: "main-container"}, "Hello main-container")
-	      )
-	    );
-	  }
-	}); 
-	return MainComponent; 
+    var reactComponent = React.createClass({displayName: "reactComponent",
+
+        getInitialState: function() {
+            return ({
+                title : "mindQ",
+                username: "rajesh" 
+            });
+        },
+
+        render: function() {
+            return ( 
+                React.createElement("div", {className: "row footer-row"}, 
+                    React.createElement("div", {className: "col-md-12"}, 
+                           React.createElement("div", {className: "text-right title"})
+                    )
+	           )
+            );
+        }
+    });
+
+    var componentObj = {};
+
+    componentObj.el = function() {
+        return React.createElement(reactComponent);
+    }
+    return componentObj;
 
 });
