@@ -5,7 +5,8 @@ require.config({
         lodash: "lib/lodash",
         underscore: 'lib/underscore',
         backbone: "lib/backbone",        
-        react: 'lib/react'
+        react: 'lib/react',
+        home : "reactViews/home"
     },
     shim: {
         backbone: {

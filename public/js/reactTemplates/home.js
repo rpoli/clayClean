@@ -1,6 +1,6 @@
 define(['react'], function( React ) {
-
-	var MainComponent = React.createClass({
+		
+	var reactComponent = React.createClass({
 	  render: function () {
 	    return (
 	      <div>
@@ -8,7 +8,12 @@ define(['react'], function( React ) {
 	      </div>
 	    );
 	  }
-	}); 
-	return MainComponent; 
+	});
+
+	var componentObj = {};
+	componentObj.el = function(){
+		return React.createElement(reactComponent);
+	} 
+	return componentObj; 
 
 });
