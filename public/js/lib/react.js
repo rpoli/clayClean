@@ -9987,9 +9987,6 @@ if ("production" !== "development") {
 
 ReactElement.createElement = function(type, config, children) {
 
-    console.log(config);
-
-
   var propName;
 
   // Reserved names are extracted

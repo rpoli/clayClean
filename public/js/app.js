@@ -7,23 +7,36 @@ define(['backbone','reactViews/memberList','reactViews/common/header','reactView
        React.render(header.el(), document.getElementById("appHeader"));
        React.render(footer.el(), document.getElementById("appFooter"));   
 
-
-
-		},
+	},
 		 routes: {
 	        "members": "getMembers",
 	        "member/:id" : "getMemberDetails"	           
        	},
        	getMembers : function(){
       	
-        var sdsd = React.render(memberList.el(), document.getElementById("appSection"));
 
-        console.log(sdsd);
-       		
-        console.log(sdsd.setState({"name" : "ramesh"}));
-          
-      
-       	
+        memberList.component.prototype.componentDidMount = function(){
+          console.timeEnd("original");
+        }
+
+        var memberListComponent = React.render(memberList.el(), document.getElementById("appSection"));       
+       
+        console.log(React.findDOMNode(memberListComponent.refs.refreshIcon));
+
+
+        React.findDOMNode(memberListComponent.refs.refreshIcon).onclick = function(){
+          console.time("recordupdate");
+          //memberListComponent.updateFirstChild({name : "ramesh"}, 0);
+          memberListComponent.setState({title : "ramesh"});
+          //memberListComponent.forceUpdate();
+          console.timeEnd("recordupdate");
+
+        };
+
+        memberListComponent.componentDidUpdate = function(){
+          console.log("rendered");
+        };
+
 
         },
        	getMemberDetails : function(){

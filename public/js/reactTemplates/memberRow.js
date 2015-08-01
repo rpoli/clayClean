@@ -10,7 +10,7 @@ define(['react'], function(React) {
 
         render: function() {
             return ( 
-                <tr><td>1</td><td>Ramesh Polishetti</td><td>Hyderabad</td><td>+91 9701181405</td><td><span aria-hidden="true" className="glyphicon glyphicon-pencil"></span></td></tr>
+                <tr ref="liElement"><td>{this.props.index}</td><td>{this.props.name}</td><td>{this.props.location}</td><td>{this.props.contact}</td><td><span aria-hidden="true" className="glyphicon glyphicon-pencil"></span></td></tr>
             );
         }
     });
@@ -22,9 +22,9 @@ define(['react'], function(React) {
 
     componentObj.component = reactComponent;
 
-    componentObj.el = function() {
+    componentObj.el = function(propObj) {
 
-        return React.createElement(reactComponent);
+        return React.createElement(reactComponent, propObj);
     }
     return componentObj;
 

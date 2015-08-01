@@ -13,7 +13,7 @@ define(['react'], function(React) {
             return ( 
                 React.createElement("div", {className: "row header-row"}, 
                     React.createElement("div", {className: "col-md-12"}, 
-                           React.createElement("div", {className: "text-right title"}, React.createElement("h3", {class: "text-right"}, " ", this.state.title, " "))
+                           React.createElement("div", {className: "text-right title"}, React.createElement("h3", {className: "text-right"}, " ", this.state.title, " "))
                     )
 	           )
             );
